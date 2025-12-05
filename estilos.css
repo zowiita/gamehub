@@ -1,0 +1,554 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	color: #333;
+	background-color: #f5f5f5;
+}
+
+header {
+	background-color: #2c3e50;
+	color: white;
+	padding: 1rem 0;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2rem;
+}
+
+.logo {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.menu {
+	list-style: none;
+	display: flex;
+	gap: 1.5rem;
+	flex-wrap: wrap;
+}
+
+.menu a {
+	color: white;
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	transition: background-color 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+	background-color: #34495e;
+}
+
+main {
+	max-width: 1200px;
+	margin: 2rem auto;
+	padding: 0 2rem;
+}
+
+.hero {
+	text-align: center;
+	padding: 3rem 0;
+	background-color: white;
+	border-radius: 8px;
+	margin-bottom: 2rem;
+}
+
+.hero h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+	color: #2c3e50;
+}
+
+.hero p {
+	font-size: 1.2rem;
+	color: #7f8c8d;
+}
+
+.secciones {
+	margin-top: 2rem;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+}
+
+.card {
+	background-color: white;
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+	color: #2c3e50;
+	margin-bottom: 1rem;
+}
+
+.card p {
+	margin-bottom: 1.5rem;
+	color: #555;
+}
+
+.btn {
+	display: inline-block;
+	background-color: #3498db;
+	color: white;
+	padding: 0.75rem 1.5rem;
+	text-decoration: none;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+	font-size: 1rem;
+	transition: background-color 0.3s;
+}
+
+.btn:hover {
+	background-color: #2980b9;
+}
+
+.contenido {
+	background-color: white;
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contenido h1 {
+	color: #2c3e50;
+	margin-bottom: 1rem;
+	font-size: 2.2rem;
+}
+
+.intro {
+	font-size: 1.1rem;
+	color: #7f8c8d;
+	margin-bottom: 2rem;
+	padding-bottom: 1rem;
+	border-bottom: 2px solid #ecf0f1;
+}
+
+.articulo {
+	margin-bottom: 2rem;
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid #ecf0f1;
+}
+
+.articulo:last-child {
+	border-bottom: none;
+}
+
+.articulo h2 {
+	color: #34495e;
+	margin-bottom: 0.5rem;
+}
+
+.articulo p {
+	color: #555;
+	line-height: 1.8;
+}
+
+.grid-generos {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.card-genero {
+	background-color: #f8f9fa;
+	padding: 2rem;
+	border-radius: 8px;
+	border: 2px solid #e9ecef;
+	transition: border-color 0.3s;
+}
+
+.card-genero:hover {
+	border-color: #3498db;
+}
+
+.card-genero h2 {
+	color: #2c3e50;
+	margin-bottom: 1rem;
+}
+
+.card-genero p {
+	margin-bottom: 1.5rem;
+	color: #555;
+}
+
+.grid-personajes {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1.5rem;
+	margin-top: 2rem;
+}
+
+.card-personaje {
+	background-color: #f8f9fa;
+	padding: 1.5rem;
+	border-radius: 8px;
+	border-left: 4px solid #3498db;
+}
+
+.card-personaje h2 {
+	color: #2c3e50;
+	margin-bottom: 0.5rem;
+}
+
+.card-personaje p {
+	color: #555;
+	font-size: 0.95rem;
+}
+
+.ranking {
+	margin-top: 2rem;
+}
+
+.item-ranking {
+	display: flex;
+	align-items: flex-start;
+	gap: 1.5rem;
+	padding: 1.5rem;
+	margin-bottom: 1rem;
+	background-color: #f8f9fa;
+	border-radius: 8px;
+	border-left: 4px solid #3498db;
+}
+
+.posicion {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	background-color: #3498db;
+	color: white;
+	border-radius: 50%;
+	font-size: 1.5rem;
+	font-weight: bold;
+	flex-shrink: 0;
+}
+
+.info-juego {
+	flex: 1;
+}
+
+.info-juego h2 {
+	color: #2c3e50;
+	margin-bottom: 0.5rem;
+	font-size: 1.3rem;
+}
+
+.info-juego p {
+	color: #555;
+}
+
+.timeline {
+	margin-top: 2rem;
+}
+
+.evento-timeline {
+	display: flex;
+	gap: 2rem;
+	margin-bottom: 2rem;
+	padding-bottom: 2rem;
+	border-bottom: 2px solid #ecf0f1;
+}
+
+.evento-timeline:last-child {
+	border-bottom: none;
+}
+
+.año {
+	display: inline-block;
+	background-color: #2c3e50;
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	font-weight: bold;
+	font-size: 1.1rem;
+	min-width: 80px;
+	text-align: center;
+	flex-shrink: 0;
+}
+
+.evento-info {
+	flex: 1;
+}
+
+.evento-info h2 {
+	color: #34495e;
+	margin-bottom: 0.5rem;
+}
+
+.evento-info p {
+	color: #555;
+}
+
+.enlace-subseccion,
+.enlace-volver {
+	margin-top: 2rem;
+	padding-top: 2rem;
+	border-top: 2px solid #ecf0f1;
+	text-align: center;
+}
+
+.ficha-personaje {
+	margin-top: 2rem;
+}
+
+.info-personaje,
+.historia-personaje,
+.juegos-personaje,
+.caracteristicas-personaje,
+.impacto-personaje {
+	margin-bottom: 2rem;
+	padding: 1.5rem;
+	background-color: #f8f9fa;
+	border-radius: 8px;
+}
+
+.info-personaje h2,
+.historia-personaje h2,
+.juegos-personaje h2,
+.caracteristicas-personaje h2,
+.impacto-personaje h2 {
+	color: #2c3e50;
+	margin-bottom: 1rem;
+}
+
+.info-personaje ul,
+.juegos-personaje ul {
+	list-style-position: inside;
+	color: #555;
+	line-height: 2;
+}
+
+.info-personaje li,
+.juegos-personaje li {
+	margin-bottom: 0.5rem;
+}
+
+.historia-personaje p,
+.caracteristicas-personaje p,
+.impacto-personaje p {
+	color: #555;
+	line-height: 1.8;
+	margin-bottom: 1rem;
+}
+
+.formulario-contacto {
+	margin-top: 2rem;
+	background-color: #f8f9fa;
+	padding: 2rem;
+	border-radius: 8px;
+}
+
+.campo-formulario {
+	margin-bottom: 1.5rem;
+}
+
+.campo-formulario label {
+	display: block;
+	margin-bottom: 0.5rem;
+	color: #2c3e50;
+	font-weight: bold;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+	width: 100%;
+	padding: 0.75rem;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	font-size: 1rem;
+	font-family: Arial, sans-serif;
+}
+
+.campo-formulario textarea {
+	resize: vertical;
+}
+
+#mensaje-enviado {
+	background-color: #d4edda;
+	color: #155724;
+	padding: 1rem;
+	border-radius: 4px;
+	margin-top: 1rem;
+	text-align: center;
+}
+
+.info-contacto {
+	margin-top: 2rem;
+	padding: 1.5rem;
+	background-color: #f8f9fa;
+	border-radius: 8px;
+}
+
+.info-contacto h2 {
+	color: #2c3e50;
+	margin-bottom: 1rem;
+}
+
+.info-contacto p {
+	color: #555;
+	margin-bottom: 0.5rem;
+}
+
+.info-alumno {
+	margin-top: 2rem;
+}
+
+.info-alumno h2 {
+	color: #2c3e50;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+}
+
+.info-alumno h2:first-child {
+	margin-top: 0;
+}
+
+.info-alumno p {
+	color: #555;
+	margin-bottom: 0.5rem;
+	line-height: 1.8;
+}
+
+.info-alumno ul {
+	margin-left: 2rem;
+	color: #555;
+	line-height: 2;
+}
+
+#trivia-container {
+	margin-top: 2rem;
+}
+
+#pregunta-actual {
+	background-color: #f8f9fa;
+	padding: 2rem;
+	border-radius: 8px;
+}
+
+#pregunta-texto {
+	color: #2c3e50;
+	margin-bottom: 1.5rem;
+	font-size: 1.3rem;
+}
+
+#opciones {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.opcion {
+	padding: 1rem;
+	background-color: white;
+	border: 2px solid #ddd;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.opcion:hover {
+	border-color: #3498db;
+	background-color: #ebf5fb;
+}
+
+.opcion.correcta {
+	background-color: #d4edda;
+	border-color: #28a745;
+}
+
+.opcion.incorrecta {
+	background-color: #f8d7da;
+	border-color: #dc3545;
+}
+
+#resultado {
+	background-color: #f8f9fa;
+	padding: 2rem;
+	border-radius: 8px;
+	text-align: center;
+}
+
+#resultado h2 {
+	color: #2c3e50;
+	margin-bottom: 1rem;
+}
+
+#puntuacion-final {
+	font-size: 1.2rem;
+	color: #555;
+	margin-bottom: 1.5rem;
+}
+
+footer {
+	background-color: #2c3e50;
+	color: white;
+	text-align: center;
+	padding: 2rem 0;
+	margin-top: 3rem;
+}
+
+footer p {
+	margin-bottom: 0.5rem;
+}
+
+footer a {
+	color: #3498db;
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+	nav {
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.menu {
+		justify-content: center;
+	}
+
+	.hero h1 {
+		font-size: 2rem;
+	}
+
+	.grid {
+		grid-template-columns: 1fr;
+	}
+
+	.evento-timeline {
+		flex-direction: column;
+		gap: 1rem;
+	}
+}
+

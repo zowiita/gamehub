@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Trivia Gamer - Gaming World</title>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="logo">Gaming World</div>
+			<ul class="menu">
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="historia.html">Historia</a></li>
+				<li><a href="catalogo.html">Catálogo</a></li>
+				<li><a href="top-personajes.html">Personajes</a></li>
+				<li><a href="consolas.html">Consolas</a></li>
+				<li><a href="trivia.html" class="active">Trivia</a></li>
+				<li><a href="top-juegos.html">Top Juegos</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="contenido">
+			<h1>Trivia Gamer</h1>
+			<p class="intro">Pon a prueba tus conocimientos sobre videojuegos. Responde las preguntas y descubre tu puntuación.</p>
+
+			<div id="trivia-container">
+				<div id="pregunta-actual">
+					<h2 id="pregunta-texto"></h2>
+					<div id="opciones"></div>
+					<button id="btn-siguiente" class="btn" style="display:none;">Siguiente Pregunta</button>
+				</div>
+
+				<div id="resultado" style="display:none;">
+					<h2>Resultado Final</h2>
+					<p id="puntuacion-final"></p>
+					<button id="btn-reiniciar" class="btn">Jugar de Nuevo</button>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2024 Gaming World. Todos los derechos reservados.</p>
+		<p><a href="alumno.html">Información del Alumno</a></p>
+	</footer>
+
+	<script src="trivia.js"></script>
+</body>
+</html>
+
